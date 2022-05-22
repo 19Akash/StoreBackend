@@ -54,10 +54,10 @@ async function postSignIn(req,res){
     console.log(user);
     if(user)
     {
-     res.json({
+        res.json({
         message:"data sent",
         data:user
-    })
+       })
     }
     else{
         res.json({
