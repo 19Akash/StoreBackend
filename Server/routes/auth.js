@@ -32,13 +32,13 @@ async function postSignUp(req,res){
     }
     else
     {
-            const user=User.create(req.body)
-            console.log(req.body);
+            const user= await User.create(req.body)
+            console.log(user);
             if(user)
             {
                 res.status(200).json({
                     message:"data Recieved from post request",
-                    data:req.body
+                    data:user
                 })
             }
             else{
